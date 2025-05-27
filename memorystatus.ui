@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ 
+ <class>MemoryStatus</class>
+ <widget class="QDialog" name="MemoryStatus">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mini OS - System Resources</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>System Resources</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="memoryLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Memory Usage: 0/0 MB (0%)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="memoryProgressBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="diskSpaceLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Disk Space: 0 MB</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="cpuCoresLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>CPU Cores: 0</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="noteLabel">
+     <property name="font">
+      <font>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>Resources are updated in real-time</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeButton">
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

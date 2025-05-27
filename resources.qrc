@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/text-editor.png</file>
+        <file>icons/calculator.png</file>
+        <file>icons/resources.png</file>
+        <file>icons/games.png</file>
+        <file>icons/logo.png</file>
+        <file>icons/kernel.png</file>
+        <file>icons/user.png</file>
+        <file>icons/calendar.png</file>
+        <file>icons/clock.png</file>
+        <file>icons/systeminfo.png</file>
+        <file>icons/pcbtable.png</file>
+        <file>icons/filebrowser.png</file>
+    </qresource>
+</RCC>

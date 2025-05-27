@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PCBTable</class>
+ <widget class="QDialog" name="PCBTable">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mini OS - Process Control Block Table</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Process Control Block Table</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="resourceLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>Memory Usage: 0 MB | Process ID: 0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="processTable">
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>PID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>State</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Priority</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Memory</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Start Time</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>CPU Time</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="statsLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Total: 0 | Running: 0 | Waiting: 0 | Blocked: 0</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="refreshButton">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="killProcessButton">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Kill Process</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="priorityButton">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Change Priority</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="closeButton">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Close</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

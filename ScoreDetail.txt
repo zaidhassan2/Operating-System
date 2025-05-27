@@ -1,0 +1,2 @@
+A's Score is 60
+Player1's Score is 50

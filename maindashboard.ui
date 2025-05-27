@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainDashboard</class>
+ <widget class="QMainWindow" name="MainDashboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+   
+  </property>
+  <property name="windowTitle">
+   <string>Mini OS - Dashboard</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mini OS Dashboard</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="memoryLabel">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Memory: 0/0 MB | Disk: 0 MB | CPU: 0 cores</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="textEditorButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Text Editor</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/icons/text-editor.png</normaloff>:/icons/text-editor.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>64</width>
+          <height>64</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="calculatorButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Calculator</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/icons/calculator.png</normaloff>:/icons/calculator.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>64</width>
+          <height>64</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="resourcesButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Resources</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/icons/resources.png</normaloff>:/icons/resources.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>64</width>
+          <height>64</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="gamesButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Mini Games</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/icons/games.png</normaloff>:/icons/games.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>64</width>
+          <height>64</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="exitButton">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

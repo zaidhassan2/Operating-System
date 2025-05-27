@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Clock</class>
+ <widget class="QDialog" name="Clock">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mini OS - Clock</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Clock</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="resourceLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>10</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>Memory Usage: 0 MB | Process ID: 0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="timeLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>24</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>00:00:00</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="dateLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Monday, January 1, 2024</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="formatToggleButton">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Switch to 24-Hour</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="alarmButton">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Set Alarm</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QPushButton" name="closeButton">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Close</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

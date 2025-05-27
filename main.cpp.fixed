@@ -1,0 +1,74 @@
+#include "modeselection.h"
+#include "resourceallocation.h"
+#include "maindashboard.h"
+#include "sharedmemory.h"
+#include <QPainter>
+#include <QApplication>
+#include <QMessageBox>
+#include <QSplashScreen>
+#include <QTimer>
+#include <QDebug>
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+    
+    // Declare pointer for dashboard that will be created later
+    MainDashboard* pDashboard = nullptr;
+    
+    // Set application style
+    app.setStyle("Fusion");
+    
+    // Load and display splash screen
+    QPixmap splashPixmap(":/icons/logo.png");
+    if (splashPixmap.isNull()) {
+        // If logo not found, create a default splash screen
+        splashPixmap = QPixmap(500, 300);
+        splashPixmap.fill(Qt::white);
+        QPainter painter(&splashPixmap);
+        painter.setPen(Qt::red);
+        painter.setFont(QFont("Arial", 24, QFont::Bold));
+        painter.drawText(QRect(0, 0, 500, 300), Qt::AlignCenter, "Welcome to Mini OS");
+    }
+    
+    QSplashScreen splash(splashPixmap);
+    splash.show();
+    app.processEvents();
+    
+    // Initialize the shared memory
+    if (!SharedMemory::instance().initialize()) {
+        QMessageBox::critical(nullptr, "Error", "Failed to initialize shared memory. The application will now exit.");
+        return 1;
+    }
+    
+    // Show mode selection dialog after a short delay
+    QTimer::singleShot(2000, [&]() {
+        splash.close();
+        
+        ModeSelection modeSelector;
+        if (modeSelector.exec() != QDialog::Accepted || !modeSelector.isUserMode()) {
+            // If user cancels or chooses kernel mode and then cancels shutdown, exit
+            app.exit(0);
+            return;
+        }
+        
+        // Show resource allocation dialog
+        ResourceAllocation resourceAlloc;
+        if (resourceAlloc.exec() != QDialog::Accepted) {
+            app.exit(0);
+            return;
+        }
+        
+        qDebug() << "Resource allocation successful, creating dashboard...";
+        
+        // Create the dashboard on the heap with the QApplication as parent
+        // This ensures it won't be destroyed when the lambda exits
+        pDashboard = new MainDashboard();
+        pDashboard->setAttribute(Qt::WA_DeleteOnClose); // Will be deleted when closed
+        pDashboard->show();
+        
+        qDebug() << "Dashboard shown";
+    });
+    
+    return app.exec();
+}
