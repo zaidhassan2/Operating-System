@@ -1,3 +1,6 @@
+https://youtu.be/A4O1GlvfsOc
+
+
 # Mini OS GUI: Ultimate Cross-Platform Setup Guide
 
 ## Project Overview
