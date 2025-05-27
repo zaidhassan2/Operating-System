@@ -1,4 +1,4 @@
-https://youtu.be/A4O1GlvfsOc
+[![Watch the video](https://img.youtube.com/vi/A4O1GlvfsOc/0.jpg)](https://youtu.be/A4O1GlvfsOc)
 
 
 # Mini OS GUI: Ultimate Cross-Platform Setup Guide
